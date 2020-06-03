@@ -1,4 +1,6 @@
 import Student, { StudentInfo } from './students'; // relative path to the module without the ts extension
+// how many Student objects created ??? - 0
+console.log(Student.count);
 
 // Person Y
 // create an object from a class
@@ -20,6 +22,16 @@ const s1: Student = new Student('mehul', 'm', 10, 90);
 
 
 console.log(s1.getDetails());
+
+// s1.roll = -15; // will give an error since roll is private
+
+s1.roll = -15;
+// Internally
+// s1.roll(15) // set method
+
+// s1.setRoll(-8768);
+
+console.log(s1.getDetails());
 // Internally
 // s1.getDetails() => Student.getDetails(s1)
 
@@ -37,3 +49,14 @@ console.log(s2.getDetails());
 
 console.log(s1.getGrade());
 console.log(s2.getGrade());
+
+// console.log(s2.getRoll()); // s2.roll
+console.log(s2.roll);
+// Internally
+// s2.roll() # get method
+
+// hw many Student objects created till now ? - 2
+console.log(Student.count);
+
+const s3: Student = Student.createStudent('jill', 'f', 34, 98);
+console.log(s3.getDetails());

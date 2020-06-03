@@ -42,3 +42,11 @@ function areaRectangle(length: number = 3, breadth: number = 2): number {
 console.log(areaRectangle(5, 3));
 console.log(areaRectangle(6));
 console.log(areaRectangle(undefined, 2.5)); // length will be given a default value of 3
+
+console.log(typeof l1);
+console.log(typeof b1);
+console.log(typeof areaRectangle); // function
+console.log(typeof perimeterRectangle); // function
+
+// Functions in javascript are treated as first class objects (values).
+// The way you would treat an number, string, boolean, Student,..., in a similar way you treat function
